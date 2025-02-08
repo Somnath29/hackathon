@@ -1,3 +1,128 @@
+/* Mood Tracker Button */
+.mood-tracker-btn {
+    background: #673AB7;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100%;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.mood-tracker-btn:hover {
+    background: #5E35B1;
+}
+
+/* Mood History List */
+#mood-history {
+    list-style: none;
+    padding: 0;
+}
+
+#mood-history li {
+    background: #f4f4f4;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+
+
+
+/* Login Button Styling */
+.login-container {
+    position: fixed;
+    top: 20px; /* Adjust the distance from the top as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    z-index: 1000;
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Full-Screen Login Modal Styling */
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff6b6b, #ff6b6b, #f8e100, #00c6ff, #ff8f00);
+    background-size: 300% 300%;
+    animation: gradientBackground 10s ease infinite;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-modal-content {
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: modalopen 0.3s;
+    transform: translateZ(0);
+    perspective: 1000px;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.login-close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.login-close-btn:hover,
+.login-close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 /* Reset Styles */
 * {
     margin: 0;
@@ -238,4 +363,29 @@ input:checked + .slider {
 
 input:checked + .slider::before {
     transform: translateX(14px);
+}
+.new-chat-btn {
+    background: #007bff;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100%;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.new-chat-btn:hover {
+    background: #0056b3;
+}
+
+
+.mood-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
 }
