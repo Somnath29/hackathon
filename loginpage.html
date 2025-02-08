@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function login() {
+            // Get input values (optional: validate them)
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Simple validation (you can expand this)
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Please enter a valid username and password.");
+                return;
+            }
+
+            // Redirect to the chatbot page
+            window.location.href = "test.html";
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login to Sukoon Chatbot</h2>
+        <p>Hope we can help</p>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <button class="login-btn" onclick="login()">Login</button>
+    </div>
+
+</body>
+</html>

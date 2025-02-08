@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Sukoon Chatbot</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function register() {
+            const username = document.getElementById("reg-username").value;
+            const password = document.getElementById("reg-password").value;
+            const confirmPassword = document.getElementById("reg-confirm-password").value;
+
+            if (username.trim() === "" || password.trim() === "" || confirmPassword.trim() === "") {
+                alert("All fields are required.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            alert("Registration successful! Redirecting to login...");
+            window.location.href = "index.html"; // Redirect back to login
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Register for Sukoon Chatbot</h2>
+        <div class="input-group">
+            <input type="text" id="reg-username" placeholder="Choose a Username">
+        </div>
+        <div class="input-group">
+            <input type="password" id="reg-password" placeholder="Choose a Password">
+        </div>
+        <div class="input-group">
+            <input type="password" id="reg-confirm-password" placeholder="Confirm Password">
+        </div>
+        <button class="login-btn" onclick="register()">Register</button>
+        <p>Already have an account? <a href="index.html">Login</a></p>
+    </div>
+
+</body>
+</html>
