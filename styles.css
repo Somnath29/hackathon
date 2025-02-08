@@ -1,0 +1,241 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Light Theme */
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.3s ease-in-out;
+}
+
+body {
+    background: url('waves.png') no-repeat center center/cover;
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #1e1e1e;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+body.dark .chat-container {
+    background: #2c2c2c;
+}
+
+/* Chat Header */
+.chat-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+body.dark .chat-header {
+    color: #f4f4f4;
+}
+
+/* Chat Box */
+.chat-box {
+    height: 320px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 6px;
+    background: #fafafa;
+    text-align: left;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+body.dark .chat-box {
+    background: #333;
+    border-color: #555;
+}
+
+/* Messages */
+.message {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 75%;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.user-message {
+    background-color: #4CAF50;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+}
+
+.bot-message {
+    background-color: #ddd;
+    color: #333;
+    text-align: left;
+}
+
+body.dark .bot-message {
+    background: #555;
+    color: white;
+}
+
+/* Input Area */
+.chat-input {
+    display: flex;
+    margin-top: 12px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+body.dark input {
+    background: #444;
+    color: white;
+    border-color: #777;
+}
+
+button {
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 6px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Quick Replies */
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.quick-replies button {
+    background: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.quick-replies button:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Self-Care Tips Button */
+.self-care-btn {
+    background: #ff9800;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 20px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.self-care-btn:hover {
+    background: #e68900;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.theme-toggle p {
+    font-size: 14px;
+    color: #333;
+    margin-left: 10px;
+}
+
+body.dark .theme-toggle p {
+    color: white;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider::before {
+    transform: translateX(14px);
+}
